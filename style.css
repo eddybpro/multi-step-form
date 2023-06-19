@@ -1,0 +1,540 @@
+@font-face {
+    font-family: 'ubuntu';
+    src: url('./assets/fonts/Ubuntu-Regular.ttf'),
+    url('./assets/fonts/Ubuntu-Medium.ttf'),
+    url('./assets/fonts/Ubuntu-Bold.ttf');
+}
+
+:root{
+    --Marine-blue: hsl(213, 96%, 18%);
+    --Purplish-blue: hsl(243, 100%, 62%);
+    --Pastel-blue: hsl(228, 100%, 84%);
+    --Light-blue: hsl(206, 94%, 87%);
+    --Strawberry-red: hsl(354, 84%, 57%);
+
+
+    --Cool-gray: hsl(231, 11%, 63%);
+    --Light-gray: hsl(229, 24%, 87%);
+    --Magnolia: hsl(217, 100%, 97%);
+    --Alabaster: hsl(231, 100%, 99%);
+    --White: hsl(0, 0%, 100%);
+}
+
+html{
+    font-size: 62.5%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'ubuntu', sans-serif;
+}
+
+body{
+    background-color: var(--Magnolia);
+}
+
+main{
+    position: relative;
+    min-height: 120vh;
+}
+
+.steps-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+    height: 18rem;
+    padding-top: 4rem;
+    background: url('./assets/images/bg-sidebar-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.step-circle{
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 2px solid var(--Light-blue);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 1.6rem;
+    color: var(--White);
+    font-weight: 500;
+}
+
+.step-container:first-child > .step-circle{
+    background-color: var(--Light-blue);
+    color: var(--Marine-blue);
+}
+
+.form-step{
+    width: 90%;
+    background-color: var(--White);
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+    transform: translateY(-7.6rem);
+    margin: auto;
+}
+
+.form-title{
+    font-size: 2.7rem;
+    color: var(--Marine-blue);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.form-guide{
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--Cool-gray);
+}
+
+label, label > input{
+    display: block;
+}
+
+label{
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--Marine-blue);
+}
+
+label > input{
+    margin-top: .25rem;
+    color: var(--Marine-blue);
+    border: 2px solid var(--Cool-gray);
+    outline: none;
+    font-size: 1.8rem;
+    padding: 1.25rem .5rem;
+    width: 100%;
+    border-radius: .5rem;
+    transition: all .2s ease-in-out;
+}
+
+label > input:hover{
+    border: 2px solid var(--Purplish-blue);
+}
+
+.name-error,
+.email-error,
+.phone-error{
+    float: right;
+    color: var(--Strawberry-red);
+    font-size: 1.4rem;
+}
+
+.form-btns{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 0;
+    left: 0;
+    background-color: var(--White);
+    transform: translate(-2rem, 16rem);
+    width: 112%;
+    padding: 2rem 1.5rem;
+}
+
+.form-step:first-child .form-btns{
+    display: block;
+}
+
+.form-step:first-child .next-btn{
+    float: right;
+}
+
+.next-btn{
+    background-color: var(--Marine-blue);
+    font-size: 1.8rem;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 1rem 1.5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.next-btn:hover{
+    opacity: .8;
+}
+
+.go-back-btn{
+    background-color: transparent;
+    color: var(--Cool-gray);
+    font-size: 1.8rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.go-back-btn:hover{
+    color: var(--Marine-blue);
+}
+
+.option{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    border: 1px solid var(--Light-gray);
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    transition: all .2s ease-in-out;
+}
+
+.option:hover{
+    border-color: var(--Purplish-blue);
+}
+
+.option:first-child{
+    background-color:var(--Alabaster);
+    border-color: var(--Marine-blue);
+}
+
+.plan-info > strong{
+    display: block;
+    font-size: 1.8rem;
+    margin-bottom: .7rem;
+    color: var(--Marine-blue);
+}
+
+.plan-info > p{
+    font-size: 1.4rem;
+    color: var(--Cool-gray);
+}
+
+.payment-method{
+    text-align: center;
+}
+
+.payment-method > strong{
+    font-size: 1.8rem;
+    color: var(--Cool-gray);
+}
+
+.payment-method > strong:first-child{
+    color: var(--Marine-blue);
+}
+
+.yr-plan{
+    display: block;
+    color: var(--Purplish-blue);
+}
+
+.payment-method{
+    background-color: var(--Alabaster);
+    padding: 1rem 0;
+    border-radius: .5rem;
+}
+
+.payment-method > input{
+    appearance: none;
+    width: 4rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background-color: var(--Marine-blue);
+    margin: .5rem 1rem -.5rem;
+    position: relative;
+}
+
+.payment-method > input::before{
+    content: '';
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 0.25rem;
+    transform: translateY(-50%);
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: var(--White);
+}
+
+.payment-method > input:checked:before{
+    content: '';
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: auto;
+    right: 0.25rem;
+    transform: translateY(-50%);
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: var(--White);
+}
+
+.add-ons-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--Light-gray);
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+    max-width: 50rem;
+    margin: 0 auto 2rem;
+    transition: all .2s ease-in-out;
+}
+
+.add-ons-box:hover{
+    border-color: var(--Purplish-blue);
+}
+
+.add-ons-box > div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.add-ons-btn{
+    appearance: none;
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 1px solid var(--Light-gray);
+    outline: none;
+    border-radius: .25rem;
+    display: grid;
+    place-items: center;
+}
+
+.add-ons-btn::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('./assets/images/icon-checkmark.svg');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: .25rem;
+    background-color: var(--Purplish-blue);
+    transform: scale(0);
+}
+
+.add-ons-btn:checked::before{
+    transform: scale(1);
+}
+
+.add-ons-info > strong{
+    display: block;
+    font-size: 1.8rem;
+    color: var(--Marine-blue);
+    margin-bottom: .7rem;
+}
+
+.add-ons-info > p{
+    font-size: 1.4rem;
+    color: var(--Cool-gray);
+}
+
+.add-ons-price{
+    color: var(--Purplish-blue);
+    font-size: 1.4rem;
+}
+
+.feature-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--Magnolia);
+    padding: 1rem;
+}
+
+.feature-box:first-child{
+    border-top-left-radius:1rem ;
+    border-top-right-radius: 1rem;
+    position: relative;
+}
+
+.feature-box:first-child::after{
+    position: absolute;
+    content: '';
+    display: block;
+    bottom: 0;
+    left: 1.5rem;
+    right: 1.5rem;
+    height: 1px;
+    background-color: var(--Light-gray);
+}
+
+.feature-box:nth-last-child(2){
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.feature-box:last-child{
+    background-color: var(--White);
+    margin-top: 1rem;
+}
+
+.plan{
+    display: block;
+    font-size: 1.8rem;
+    color: var(--Marine-blue);
+    margin-bottom: .7rem;
+}
+
+.change-btn{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--Cool-gray);
+    cursor: pointer;
+    text-decoration: underline;
+    transition: all .2s ease-in-out;
+}
+
+.change-btn:hover{
+    color: var(--Purplish-blue);
+}
+
+.plan-price,
+.add-ons-feature-price{
+    font-size: 1.8rem;
+    color: var(--Marine-blue);
+}
+
+.add-ons-feature{
+    font-size: 1.8rem;
+    color: var(--Cool-gray);
+}
+
+.total-price{
+    font-size: 1.8rem;
+    color: var(--Purplish-blue);
+}
+
+.form-step:nth-last-of-type(2) .next-btn{
+    background-color: var(--Purplish-blue);
+    transition: all .2s ease-in-out;
+}
+
+.form-step:nth-last-of-type(2) .next-btn:hover{
+    opacity: .6;
+}
+
+.form-step:last-of-type{
+    text-align: center;
+}
+
+.thank-icon{
+    width: 6rem;
+    margin: 6rem 0 2rem;
+}
+
+footer{
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+.attribution{
+    font-size: 1.6rem;
+    color: var(--Cool-gray);
+    line-height: 2.25rem;
+}
+
+.attribution > a{
+    color: var(--Marine-blue);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.desktop-only{
+    display: none;
+}
+
+
+@media screen and (min-width:700px) {
+    main{
+        padding: 3rem 1.5rem;
+        position: relative;
+        width: 90%;
+        max-width: 100rem;
+        margin: 2rem auto;
+        min-height: 80vh;
+        background-color: var(--White);
+        display: grid;
+        grid-template-columns: 25rem 70%;
+        border-radius: 1rem;
+    }
+
+    .steps-container{
+        height: 100%;
+        border-radius: 1rem;
+        background: url('./assets/images/bg-sidebar-desktop.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-left: 1rem;
+    }
+
+    .step-container{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1.5rem;
+    }
+
+    .desktop-only{
+        display: block;
+    }
+
+    .desktop-only > p{
+        font-size: 1.6rem;
+        color: var(--Cool-gray);
+        margin-bottom: .7rem;
+    }
+
+    .desktop-only > strong{
+        color: var(--White);
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+
+    .form-step {
+        width: 100%;
+        transform: none;
+    }
+
+    .form-btns{
+        transform: none;
+        position: relative;
+        width: 100%;
+    }
+
+    .plan-options{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .option{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5rem;
+    }
+
+}
+
+
+.none{
+    display: none;
+}
+
+
+
+
